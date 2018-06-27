@@ -1,0 +1,90 @@
+\documentclass[10pt, a4paper, twocolumn, titlepage]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{ngerman}
+\usepackage{datetime}
+\usepackage{xcharter}
+\usepackage{graphicx}
+\usepackage[section]{placeins}
+\usepackage{spverbatim}
+\usepackage{hyperref}
+\usepackage{fancyvrb}
+\usepackage{vhistory}
+\usepackage{lipsum}
+
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+  {1em}%
+  {-1em}%
+  {\normalfont\normalsize\itshape}}
+\makeatother
+
+\newcommand{\formaturl}[1]{\underline{#1}}
+\newcommand{\inlinecode}{\texttt}
+\renewcommand*{\ttdefault}{qcr}
+
+\newcommand{\AW}{Andreas Wiedel}
+
+\title{LaTex Template}
+\author{Andreas Wiedel  \\
+  ich@andreas-wiedel.de \\
+}
+
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+
+\begin{abstract}
+The abstract text.
+\end{abstract}
+
+
+\onecolumn
+
+
+\begin{versionhistory}
+  \vhEntry{1.0.0}{2018-06-27}{\AW}{Creation of the document}
+\end{versionhistory}
+
+
+\newpage
+\clearpage
+
+
+\tableofcontents % create a table of contens 
+\listoffigures
+\listoftables
+
+\newpage
+\clearpage
+
+\twocolumn
+
+
+\section{Sample Text}
+
+\cite{sample}
+
+\lipsum[10-30]
+
+
+\onecolumn
+
+\lipsum[3-9]
+
+\twocolumn
+
+\lipsum[10-30]
+
+\newpage
+\clearpage
+%\onecolumn
+
+
+\bibliographystyle{elsarticle-num-custom}
+\bibliography{references}
+
+\end{document}
